@@ -78,7 +78,7 @@ ok: [localhost]
 ## Testing ⚙️
 
 the infrastructure orchestration can be depicted next:
-![stack-outputs](images/stack-output.png)
+![stack-outputs](images/templates.png)
 
 
 ### Adjusting ECS instance Type
