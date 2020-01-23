@@ -77,7 +77,7 @@ ok: [localhost]
 
 ## Testing ⚙️
 
-the infrastructure orchestration can be depicted next:
+The infrastructure orchestration can be depicted next:
 ![stack-outputs](images/templates.png)
 
 
