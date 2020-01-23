@@ -18,6 +18,8 @@ Ansible at least 2.7
 Amazon console api
 An Amazon AWS account
 IAM credentials to login to the AWS account (will be provided)
+Python 3+
+Virtualenv
 ```
 
 For reference, the webservice was deployed by using MacOS Mojave 10.14.5.
@@ -133,6 +135,37 @@ Values can be modified within the ansible main.yml file.
       register: vpc_stack
 ```
 
+## Running Healthcheck script
+Create a python 3 virtual environment and install the requirenments by using the requirements.txt. 
+Steps are shown next:
+initialize the virtual environment with python 3:
+```
+virtualenv3 -p python3 .venv
+```
+Acvitvate the virtualenvironment:
+```
+source .venv/bin/activate
+```
+Install dependencies:
+```
+pip3 install -r requirements.txt
+```
+Run the healthcheck script by providing the Load balancer URL:
+```
+python3 status.py URL_SITE
+    URL_SITE is the url from the load balancer
+```
+Output is as follows:
+```
+(.venv) ➜  WebServiceChallenge git:(master) ✗ python3 status.py http://URL/now
+{'current_time': '20:11:51'}
+-2208919689.0
+21:11:51
+-2208916089.0
+today time is greater
+http://URL/now        200
+
+```
 ## License
 
 Copyright 2011-2016 Amazon.com, Inc. or its affiliates. All Rights Reserved.
