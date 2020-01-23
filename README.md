@@ -80,6 +80,8 @@ ok: [localhost]
 The infrastructure orchestration can be depicted next:
 ![stack-outputs](images/templates.png)
 
+Web service in action:
+![webservice in action](images/lb_site.png)
 
 ### Adjusting ECS instance Type
 
